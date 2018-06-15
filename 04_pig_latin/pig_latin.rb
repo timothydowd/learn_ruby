@@ -13,7 +13,7 @@ def translate(s)
 	
 	a.each do |element|
 
-		if element.is_a?
+		if element.is_a?(Array)
 		
 			loop do
 
@@ -28,7 +28,7 @@ def translate(s)
 
 			a = a.rotate(1) #if vowel isn't present then its a constonant so send that consonant to the end of the word
 
-		else		
+		end		
 
 			loop do
 
