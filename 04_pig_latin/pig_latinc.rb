@@ -2,7 +2,6 @@ def translate(s)
 
   vowels = ["a","e","i","o","u"]
   split_sentence = s.split(" ")
-  pig_sentence = []
 
   split_sentence.each do |word|
     catch (:stop) do
@@ -12,10 +11,10 @@ def translate(s)
 		    word = word.split("") #if so it turns to array and adds ay to end, then turns back to str
 			word.push("ay")
 			word = word.join("")
-			
-			pig_sentence.push(word)
+			puts word
+			return word
 
-  	 	 	throw :stop # exits nested loop to avoid checking the rest of vowels.
+			throw :stop # exits nested loop to avoid checking the rest of vowels.
 
 		  end
 				
@@ -24,16 +23,9 @@ def translate(s)
 		word = word.split("") #if vowel isn't present then its a consonant so send that consonant to the end of the word
 		word = word.rotate(1)
 		word = word.join("")
-		
-
 	  end
 	end
-	
   end
-
-  return pig_sentence.join(" ")
-  
-  
 end
 
 
