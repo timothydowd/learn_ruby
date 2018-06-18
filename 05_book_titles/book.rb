@@ -1,3 +1,10 @@
 class Book
-# write your code here
+  def initialize(title)
+  	@title = title
+
+  end
+
+  @book = book.new
+
+
 end
