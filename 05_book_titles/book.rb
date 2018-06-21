@@ -1,10 +1,34 @@
 class Book
-  def initialize(title)
-  	@title = title
+  def initialize
+  end
+
+  def title=(t) #setter
+
+  	exclude = ["the", "a", "an", "and", "in", "of"]
+
+  	t = t.split(" ")
+    t.each do |word|
+    	if !exclude.include? word
+    		
+      	    word.capitalize!
+            
+        end
+    end
+    t[0].capitalize!
+    @title = t.join(" ")
+    
+    	
 
   end
 
-  @book = book.new
+
+
+  def title #getter
+    @title
+  end
 
 
 end
+
+
+
